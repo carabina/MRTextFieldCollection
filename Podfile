@@ -2,11 +2,11 @@
 
 platform :ios, '8.0'
 
-target 'MRTextField' do
+target 'MRTextFieldCollection' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
 
-  # Pods for MRTextField
+  # Pods for MRTextFieldCollection
   
   # https://github.com/hackiftekhar/IQKeyboardManager
   pod 'IQKeyboardManager'
