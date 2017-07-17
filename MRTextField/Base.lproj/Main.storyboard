@@ -39,6 +39,9 @@
                                             <userDefinedRuntimeAttribute type="color" keyPath="baselineHUDInactiveColor">
                                                 <color key="value" red="0.83719963080000004" green="0.89126904080000002" blue="0.96580016609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="maxlength">
+                                                <integer key="value" value="11"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                 </subviews>

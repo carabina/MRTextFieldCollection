@@ -22,12 +22,6 @@
 
 #pragma mark - setter and getter
 
-- (void)dealloc
-{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidBeginEditingNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UITextFieldTextDidEndEditingNotification object:nil];
-}
-
 #pragma mark - baselineHUDHeight
 
 - (void)setBaselineHUDHeight:(CGFloat)baselineHUDHeight
@@ -96,20 +90,19 @@
 
 - (void)layoutBaselineHUDIfNeed
 {
-    __weak typeof(self) _self = self;
 
     if (!self.baselineHUDLayer) {
         self.baselineHUDLayer = [CAShapeLayer layer];
         self.baselineHUDLayer.fillColor = self.baselineHUDInactiveColor.CGColor;
         [self.superview.layer addSublayer:self.baselineHUDLayer];
         
-        [[NSNotificationCenter defaultCenter] addObserverForName:UITextFieldTextDidBeginEditingNotification object:self queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-            _self.baselineHUDLayer.fillColor = self.baselineHUDActiveColor.CGColor;
-        }];
+        [self addTarget:self
+                 action:@selector(textFieldEventEditingDidBegin:)
+       forControlEvents:UIControlEventEditingDidBegin];
         
-        [[NSNotificationCenter defaultCenter] addObserverForName:UITextFieldTextDidEndEditingNotification object:self queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-            _self.baselineHUDLayer.fillColor = self.baselineHUDInactiveColor.CGColor;
-        }];
+        [self addTarget:self
+                 action:@selector(textFieldEventEditingDidEnd:)
+       forControlEvents:UIControlEventEditingDidEnd|UIControlEventEditingDidEndOnExit];
     }
     
     CGFloat height = self.baselineHUDHeight;
@@ -123,6 +116,18 @@
     
     UIBezierPath *baselineHUDLayerPath = [UIBezierPath bezierPathWithRect:self.baselineHUDLayer.bounds];
     self.baselineHUDLayer.path = baselineHUDLayerPath.CGPath;
+}
+
+#pragma mark - events
+
+- (void)textFieldEventEditingDidBegin:(UITextField *)textField
+{
+    textField.baselineHUDLayer.fillColor = self.baselineHUDActiveColor.CGColor;
+}
+
+- (void)textFieldEventEditingDidEnd:(UITextField *)textField
+{
+    textField.baselineHUDLayer.fillColor = self.baselineHUDInactiveColor.CGColor;
 }
 
 @end

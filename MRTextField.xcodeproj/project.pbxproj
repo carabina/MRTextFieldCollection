@@ -15,6 +15,7 @@
 		6775D0661F1BA04E0029B271 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6775D0641F1BA04E0029B271 /* LaunchScreen.storyboard */; };
 		6775D0701F1BA1470029B271 /* UITextField+BaselineHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775D06F1F1BA1470029B271 /* UITextField+BaselineHUD.m */; };
 		6775D0781F1C5CB00029B271 /* MRTextFieldCollection.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6775D0771F1C5CB00029B271 /* MRTextFieldCollection.podspec */; };
+		6775D07B1F1C6EB70029B271 /* UITextField+BaseClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 6775D07A1F1C6EB70029B271 /* UITextField+BaseClass.m */; };
 		A0E5A0390EAE1918BE88AD19 /* libPods-MRTextField.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5A42D18698F46EE96DCB95 /* libPods-MRTextField.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		6775D06E1F1BA1470029B271 /* UITextField+BaselineHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BaselineHUD.h"; sourceTree = "<group>"; };
 		6775D06F1F1BA1470029B271 /* UITextField+BaselineHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BaselineHUD.m"; sourceTree = "<group>"; };
 		6775D0771F1C5CB00029B271 /* MRTextFieldCollection.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MRTextFieldCollection.podspec; sourceTree = "<group>"; };
+		6775D0791F1C6EB70029B271 /* UITextField+BaseClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+BaseClass.h"; sourceTree = "<group>"; };
+		6775D07A1F1C6EB70029B271 /* UITextField+BaseClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+BaseClass.m"; sourceTree = "<group>"; };
 		AC97DC173537210345D96E84 /* Pods-MRTextField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRTextField.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MRTextField/Pods-MRTextField.debug.xcconfig"; sourceTree = "<group>"; };
 		D5FB4A175522F29F8D7DBE1B /* Pods-MRTextField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MRTextField.release.xcconfig"; path = "Pods/Target Support Files/Pods-MRTextField/Pods-MRTextField.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +108,8 @@
 		6775D06D1F1BA0DD0029B271 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6775D0791F1C6EB70029B271 /* UITextField+BaseClass.h */,
+				6775D07A1F1C6EB70029B271 /* UITextField+BaseClass.m */,
 				6775D06E1F1BA1470029B271 /* UITextField+BaselineHUD.h */,
 				6775D06F1F1BA1470029B271 /* UITextField+BaselineHUD.m */,
 			);
@@ -246,6 +251,7 @@
 				6775D05E1F1BA04E0029B271 /* ViewController.m in Sources */,
 				6775D05B1F1BA04E0029B271 /* AppDelegate.m in Sources */,
 				6775D0701F1BA1470029B271 /* UITextField+BaselineHUD.m in Sources */,
+				6775D07B1F1C6EB70029B271 /* UITextField+BaseClass.m in Sources */,
 				6775D0581F1BA04E0029B271 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
